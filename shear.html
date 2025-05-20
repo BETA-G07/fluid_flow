@@ -12,11 +12,27 @@
       <img src="logo.jpg" alt="Home" class="logo" />
     </a>
     <div class="header-text">
-      <h1>Fluid Flow Calculator</h1> <!-- Or Shear Stress & Rate Calculator -->
-    </div>
+      <h1>Fluid Flow Calculator</h1>
   </header>
 
   <div class="container">
+
+<h2>Viscosity Calculator</h2>
+    <p>This Viscosity Calculator is for Table 2-139 Viscosity of Inorganic and Organic Fluids in Perry's Chemical Engineer's Handbook 9th Edition</p>
+    <div class="calculator">
+      <label>Temperature (K): <input type="number" id="tempVisc"></label>
+      <label>C1: <input type="number" id="c1Visc"></label>
+      <label>C2: <input type="number" id="c2Visc"></label>
+      <label>C3: <input type="number" id="c3Visc"></label>
+      <label>C4: <input type="number" id="c4Visc"></label>
+      <label>C5: <input type="number" id="c5Visc"></label>
+
+      <button onclick="calculateEqn101()">Calculate Eqn 101</button>
+      <button onclick="calculateEqn100()">Calculate Eqn 100</button>
+
+      <div id="viscosityResult"></div>
+    </div>
+
     <h2>Shear Stress & Rate Calculator</h2>
 
     <form id="shearForm">
@@ -53,5 +69,7 @@
   </div>
 
   <script src="shear.js"></script>
+  <script src="viscosity.js"></script>
 </body>
 </html>
+
